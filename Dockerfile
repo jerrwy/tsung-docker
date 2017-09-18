@@ -15,7 +15,6 @@ RUN yum -y install tsung perl-Log-Log4perl-RRDs.noarch gnuplot perl-Template-Too
 RUN yum -y install openssh openssh-server openssh-clients
 RUN ssh-keygen -N "" -f /root/.ssh/id_rsa && \
     cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys && \
-    echo "Port 21" > /root/.ssh/config && \
     echo "StrictHostKeyChecking no" >> /root/.ssh/config && \
     echo "UserKnownHostsFile /dev/null" >> /root/.ssh/config
 
